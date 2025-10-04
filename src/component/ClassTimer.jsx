@@ -10,11 +10,20 @@ import React, { Component } from 'react'
       }
     }
     componentDidMount(){
-        this.interval=setInterval(()=>{this.setState()})
+      this.interval=setInterval(()=>{this.setState(prevState=>({timer:prevState.timer +1}))},1000)
+    }
+
+    componentWillUnmount(){
+      clearInterval(this.interval)
     }
   render() {
     return (
-      <div>ClassTimer</div>
+      <div>
+        <h1>
+          class timer: {this.state.timer}
+        </h1>
+        <button onClick={()=>{clearInterval(this.interval)}}>clear timer</button>
+      </div>
     )
   }
 }
