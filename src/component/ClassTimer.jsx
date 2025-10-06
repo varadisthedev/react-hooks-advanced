@@ -25,8 +25,8 @@ import React, { Component } from 'react'
 
       <button
          onClick={() => clearInterval(this.interval)}
-        className="mt-3 px-6 py-2 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-4xl shadow-md transition-all duration-200 active:scale-75">
-      Clear Timer
+        className="mt-3 px-6 py-2 bg-blue-800 text-white font-semibold rounded-3xl shadow-md border-2 border-blue-700 transition-all duration-200 hover:bg-blue-600/100 !important hover:text-white !important active:scale-90">
+      Stop Timer
       </button>
 </div>
 

@@ -15,24 +15,25 @@ function UserForm() {
         resetLastName()
     }
   return (
-    <div >
-        <form className='flex flex-col items-center justify-center w-110 h-150 bg-gradient-to-br from-blue-200 to-blue-400 ' onSubmit={submitHandler}>
-            <img src={user_blue} className='w-30 h-30 mt-15'></img>
-            <h1 className='font-extrabold text-5xl text-blue-'>Login portal</h1>
+    <div className="flex flex-col justify-center items-center p-6 min-h-screen bg-gradient-to-br from-blue-400 via-indigo-600 to-blue-700 ">
+        <form className="flex flex-col items-center justify-center w-[28rem] bg-white rounded-4xl shadow-xl p-8 border border-gray-300" onSubmit={submitHandler}>
+
+            <img src={user_blue} className='w-24 h-24 mt-12 object-contain'></img>
+            <h1 className='font-extrabold text-5xl text-black mb-2 mt-4'>Login Portal</h1>
 
             <div>
-                {/* <label >first name</label> */}
-                <input {...bindFirstName}  className='text-xl mt-7 font-medium px-3 py-1 rounded-full bg-white/10 shadow-md  border-1 w-100' placeholder='First name' type='text'></input>
+                {/* focus classes cant be grouped in tailwind */}
+                <input {...bindFirstName} className='text-xl mt-7 font-medium px-3 py-2 rounded-full bg-white shadow-sm border w-[25rem] placeholder:text-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-400' placeholder='First name' type='text'></input>
                 <img></img>
             </div>
             <div>
-                <input {...bindLastName}  className='m-3 text-xl mt-5 font-medium px-3 py-1 rounded-full bg-white/10 shadow-md  border-1 w-100' placeholder='Last name' type='password'></input>
+                <input {...bindLastName}  className='text-xl mt-5 font-medium px-3 py-2 rounded-full bg-white shadow-sm border w-[25rem] placeholder:text-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-400' placeholder='Last name' type='password'></input>
                 <img></img>
             </div>
-            <button className='text-3xl font-medium text-black bg-white rounded-3xl px-3 py-1 m-3 shadow-md border-black w-100' >login</button>
+            <button className='text-2xl font-semibold text-white bg-black rounded-3xl px-6 py-2 m-3 shadow-md border border-black w-[25rem] active:scale-95 active:shadow-sm  transition'>login</button>
         </form>
     </div>
   )
 }
 
-export default UserForm
+export default UserForm 

@@ -13,6 +13,9 @@ function App() {
     <>
       {/* <FocusInput/> */}
       <ClassTimer/>
+      <UserForm/>
+
+      
       <DocTitleOne/>
       <DocTitleTwo/>
 
@@ -21,8 +24,7 @@ function App() {
       <CounterOne/>
       <CounterTwo/>
 
-      <h2>form in react</h2>
-      <UserForm/>
+
     </>
   )
 }
